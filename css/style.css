@@ -1,0 +1,152 @@
+/* Dependancies Start */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/* Dependancies End */
+
+/* Main CSS Start */
+:root {
+    /* Fons size */
+    --size-text: min(max(2.8vmin, 18px), 22px);
+
+    /* Font families */
+    --family-text: 'Kumbh Sans', sans-serif;
+
+    /* Color palette */
+    --color-primary: hsl(185, 75%, 39%);
+    --color-secondary: hsl(229, 23%, 23%);
+    --color-accent: hsl(227, 10%, 46%);
+    --color-neutral: hsl(0, 0%, 59%);
+    --color-light: #fff;
+
+    /* Others */
+    --border-radius: 20px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: inherit;
+    text-transform: inherit;
+    color: inherit;
+    list-style: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+body {
+    font-size: var(--size-text);
+    color: var(--color-secondary);
+    list-style: none;
+    font-family: var(--family-text);
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: none;
+    line-height: none;
+
+    background-color: hsl(185, 75%, 39%);
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../images/bg-pattern-top.svg),
+        url(../images/bg-pattern-bottom.svg);
+    background-position: -75vmin -75vmin,
+        calc(100% + 30vmin) calc(100% + 100vmin);
+    background-size: 150vmin, 140vmin;
+    background-repeat: no-repeat, no-repeat;
+}
+/* Main CSS End */
+
+/* Card Start */
+.card-container {
+    width: 27rem;
+    max-width: 100%;
+    background-color: var(--color-light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+.card-container:hover {
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+}
+.card-header {
+    padding: 5rem 3rem 2rem;
+    background-image: url(../images/bg-pattern-card.svg);
+    background-size: 100% 10rem;
+    background-position: top left;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: var(--color-accent);
+    border-bottom: 1px solid var(--color-neutral);
+}
+.card-avatar {
+    width: 9rem;
+    height: 9rem;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    background-color: var(--color-light);
+}
+.card-title {
+    margin-bottom: 1rem;
+}
+.card-title span {
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+.card-subtitle {
+    font-size: calc(var(--size-text) * 0.8);
+}
+.card-content {
+    padding-top: 2rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+}
+.card-content .user-statistics {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    justify-content: space-around;
+}
+/* Card End */
+
+/* Statistics Start */
+.statistic-item {
+    width: fit-content;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    text-align: center;
+}
+.statistic-item .number {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+.statistic-item .label {
+    color: var(--color-neutral);
+    letter-spacing: 1.25px;
+    font-size: calc(var(--size-text) * 0.6);
+    display: block;
+}
+/* Statistics End */
+
+.attribution {
+    font-size: 11px;
+    text-align: right;
+    position: absolute;
+    right: 2rem;
+    bottom: 1.5rem;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
